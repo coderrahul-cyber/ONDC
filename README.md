@@ -1,84 +1,72 @@
-# Turborepo starter
+# ONDC Project
 
-This Turborepo starter is maintained by the Turborepo core team.
+ONDC (Open Network for Digital Commerce) is a comprehensive marketplace platform designed to connect users and retailers. It provides a wide range of services, including food delivery, cab booking, and bank transfers. The platform allows anyone to use or provide one of these services, fostering a collaborative and inclusive ecosystem.
 
-## Using this example
+## Features
 
-Run the following command:
+- **Marketplace for Users and Retailers**: Seamlessly connect users with retailers for various services.
+- **Food Delivery**: Order food from your favorite restaurants.
+- **Cab Booking**: Book cabs for hassle-free transportation.
+- **Bank Transfers**: Secure and fast money transfers.
+- **Service Provider Integration**: Anyone can register and provide services on the platform.
 
-```sh
-npx create-turbo@latest
-```
+## Getting Started
 
-## What's inside?
+Follow these steps to set up the ONDC project locally:
 
-This Turborepo includes the following packages/apps:
+### Prerequisites
 
-### Apps and Packages
+Ensure you have the following installed on your system:
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/) (optional, for containerized setup)
+- A package manager like `npm` or `yarn`
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### Installation
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/your-username/ONDC.git
+    cd ONDC
+    ```
 
-### Utilities
+2. **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-This Turborepo has some additional tools already setup for you:
+3. **Set Up Environment Variables**:
+    Create a `.env` file in the root directory and configure the required environment variables:
+    ```env
+    DATABASE_URL=your_database_url
+    API_KEY=your_api_key
+    ```
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+4. **Run Database Migrations**:
+    ```bash
+    npm run migrate
+    ```
 
-### Build
+5. **Start the Development Server**:
+    ```bash
+    npm start
+    ```
 
-To build all apps and packages, run the following command:
+6. **Access the Application**:
+    Open your browser and navigate to `http://localhost:3000`.
 
-```
-cd my-turborepo
-pnpm build
-```
+### Optional: Using Docker
 
-### Develop
+1. Build and run the Docker container:
+    ```bash
+    docker-compose up --build
+    ```
 
-To develop all apps and packages, run the following command:
+2. Access the application at `http://localhost:3000`.
 
-```
-cd my-turborepo
-pnpm dev
-```
+## Contributing
 
-### Remote Caching
+We welcome contributions! Please follow theto get started.
+## Contact
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+For any questions or feedback, feel free to reach out at `support@ondc.com`.
